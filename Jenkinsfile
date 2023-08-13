@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout Codebase'){
             steps{
-                checkout scm: [$class: 'GitSCM',userRemoteConfigs: [[credentialsId: 'Jenkins-Public-Key', url: 'git@github.com:RitaGlushkova/multithreading-example-1.git']]]
+                checkout scm: [$class: 'GitSCM',userRemoteConfigs: [[credentialsId: 'github-private-key', url: 'git@github.com:RitaGlushkova/multithreading-example-1.git']]]
             }
         }
 
